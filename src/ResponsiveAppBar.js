@@ -59,14 +59,9 @@ function ResponsiveAppBar() {
 */
 
   const [isDarkTheme, setIsDarkTheme] = useState(false);
-  const [linkColor, setLinkColor] = useState('#000');
   
   const changeTheme = () => {
     setIsDarkTheme(!isDarkTheme);
-    if (linkColor === '#000')
-      setLinkColor('#fff');
-    else 
-      setLinkColor('#000');
   }
   
   return (
