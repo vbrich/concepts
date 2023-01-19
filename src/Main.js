@@ -74,9 +74,6 @@ export default function Main() {
         }}
       >
         <Container maxWidth="sm" align="center">
-          <Typography variant="body1">
-            Never play leapfrog with a unicorn.
-          </Typography>
           <Copyright />
         </Container>
       </Box>

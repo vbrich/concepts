@@ -15,8 +15,6 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import dark from './themes/dark';
 import light from './themes/light';
-// import purple_light from './themes/purple_light';
-//import purple_dark from './themes/purple_dark';
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
