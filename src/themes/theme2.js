@@ -1,13 +1,13 @@
-const dark = {
+const theme2 = {
     palette: {
-      mode: "dark",
+      mode: "light",
       primary: {
-        main: '#61dafb'
-      }   
+        main: '#272727'
+      }
     },
     typography: {
       fontSize: 12,
       fontFamily: 'Roboto'
     }
   };
-  export default dark;
+  export default theme2;
