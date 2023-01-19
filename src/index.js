@@ -7,6 +7,7 @@ import './index.css';
 import ResponsiveAppBar from './ResponsiveAppBar';
 import Favorites from './Favorites';
 import Main from './Main';
+import About from './About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path='/*' element={<ResponsiveAppBar />}>                    
             <Route path='' element={<Main />}/>
             <Route path='favorites' element={<Favorites />}/>
+            <Route path='about' element={<About />}/>
         </Route>
       </Routes>
     </BrowserRouter>

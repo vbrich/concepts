@@ -7,7 +7,11 @@ const dark = {
     },
     typography: {
       fontSize: 12,
-      fontFamily: 'Roboto'
+      fontFamily: 'Caveat',
+      fontWeightLight: 400,
+      fontWeightRegular: 500,
+      fontWeightMedium: 600,
+      fontWeightBold: 700
     }
   };
   export default dark;
