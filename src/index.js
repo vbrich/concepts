@@ -15,7 +15,7 @@ root.render(
     <BrowserRouter>
       <CssBaseline />  
       <Routes>
-        <Route path='/*' element={<ResponsiveAppBar />}>                    
+        <Route path='/concepts' element={<ResponsiveAppBar />}>                    
             <Route path='' element={<Main />}/>
             <Route path='about' element={<About />}/>
         </Route>
