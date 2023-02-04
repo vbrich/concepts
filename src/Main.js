@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Copyright() {
   return (
@@ -19,6 +21,15 @@ function Copyright() {
 }
 
 export default function Main() {
+  // ROUTING
+  const navigate = useNavigate();
+  const routePOC1 = () => {
+    navigate('/swipedrawer');    
+  }
+  const routePOC2 = () => {
+    navigate('/mydrawer');    
+  }
+
   return (
     <Box
       sx={{
@@ -29,37 +40,26 @@ export default function Main() {
     >
       <CssBaseline />
       <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Main
+        <br />
+        <Typography variant="h3" component="h1" gutterBottom>
+          Choose a POC to demo
         </Typography>
-        <Typography component="h2" gutterBottom>
-          {'Pin a footer to the bottom of the viewport.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-          {'The footer will move as the main element of the page grows.'}
-        </Typography>
+
+        <Button
+            sx={{ my: 2, color: 'inherit', display: 'block' }}
+            variant='outlined'
+            onClick={routePOC1}
+          >
+            POC 1 - Swipeable Drawer
+        </Button>
+        <Button
+            sx={{ my: 2, color: 'inherit', display: 'block' }}
+            variant='outlined'
+            onClick={routePOC2}
+          >
+            POC 2 - Regular Drawer
+        </Button>
+
       </Container>
       <Box
         component="footer"

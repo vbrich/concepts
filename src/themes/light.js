@@ -7,7 +7,7 @@ const light = {
     },
     typography: {
       fontSize: 12,
-      fontFamily: 'Caveat',
+      fontFamily: 'Poiret+One',
       fontWeightLight: 400,
       fontWeightRegular: 500,
       fontWeightMedium: 600,

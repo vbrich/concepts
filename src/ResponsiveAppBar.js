@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+// import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 // import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -22,11 +22,11 @@ import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import { CssBaseline } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   // ROUTING
@@ -35,10 +35,7 @@ function ResponsiveAppBar() {
     navigate('/');    
     setAnchorElNav(null);
   }
-  const routeFavorites = () => {
-    navigate('/favorites');    
-    setAnchorElNav(null);
-  }  
+ 
   const routeAbout = () => {
     navigate('/about');    
     setAnchorElNav(null);
@@ -52,6 +49,7 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+/*
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -59,6 +57,7 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+*/
 
   const changeTheme = () => {
     setIsDarkTheme(!isDarkTheme);
@@ -125,9 +124,6 @@ function ResponsiveAppBar() {
                 <MenuItem onClick={routeHome}>
                     <Typography textAlign="center">Home</Typography>
                 </MenuItem>
-                <MenuItem onClick={routeFavorites}>
-                    <Typography textAlign="center">Favorites</Typography>
-                </MenuItem>
                 <MenuItem onClick={routeAbout}>
                     <Typography textAlign="center">About</Typography>
                 </MenuItem>                
@@ -158,6 +154,7 @@ function ResponsiveAppBar() {
             </Typography>
 */}
 
+{/*
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -185,11 +182,7 @@ function ResponsiveAppBar() {
                   </MenuItem>
                 ))}
               </Menu>
-
-
-
-
-
+*/}
 
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {/* main buttons */}
@@ -198,12 +191,6 @@ function ResponsiveAppBar() {
                   onClick={routeHome}
                 >
                   Home
-              </Button>
-              <Button
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                  onClick={routeFavorites}
-                >
-                  Favorites
               </Button>
               <Button
                   sx={{ my: 2, color: 'white', display: 'block' }}

@@ -5,9 +5,10 @@ import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import ResponsiveAppBar from './ResponsiveAppBar';
-import Favorites from './Favorites';
 import Main from './Main';
 import About from './About';
+import SwipeableEdgeDrawer from './SwipableEdgeDrawer';
+import MyDrawer from './MyDrawer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,9 +17,10 @@ root.render(
       <Routes>
         <Route path='/*' element={<ResponsiveAppBar />}>                    
             <Route path='' element={<Main />}/>
-            <Route path='favorites' element={<Favorites />}/>
             <Route path='about' element={<About />}/>
         </Route>
+        <Route path='/swipedrawer' element={<SwipeableEdgeDrawer />}/>
+        <Route path='/mydrawer' element={<MyDrawer />}/>
       </Routes>
     </BrowserRouter>
 );
