@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/concepts/static/css/main.c2ec266f.css",
+    "main.js": "/concepts/static/js/main.907486c0.js",
+    "index.html": "/concepts/index.html",
+    "main.c2ec266f.css.map": "/concepts/static/css/main.c2ec266f.css.map",
+    "main.907486c0.js.map": "/concepts/static/js/main.907486c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2ec266f.css",
+    "static/js/main.907486c0.js"
+  ]
+}
