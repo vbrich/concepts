@@ -20,7 +20,7 @@ root.render(
             <Route path='' element={<Main />}/>
             <Route path='about' element={<About />}/>
         </Route>
-        <Route path='/' element={<DemoDrawer />}/>
+        <Route path='/poc1' element={<DemoDrawer />}/>
         <Route path='/poc2' element={<DemoSwiper />}/> 
         <Route path='/poc3' element={<DemoResponsiveDrawer />}/>
       </Routes>

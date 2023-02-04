@@ -8,6 +8,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import CreateIcon from '@mui/icons-material/Create';
+import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function Copyright() {
   return (
@@ -23,6 +25,12 @@ function Copyright() {
 }
 
 export default function Main() {
+
+  // ROUTING
+  const navigate = useNavigate();
+  const routePOC1 = () => { navigate('/poc1'); }
+  const routePOC2 = () => { navigate('/poc2'); }
+  const routePOC3 = () => { navigate('/poc3'); }
 
   return (
     <Box
@@ -72,6 +80,29 @@ export default function Main() {
             <ListItemText primary="POC3 = Responsive Drawer" />
           </ListItemButton>
         </Link> 
+test
+        <br/>
+        <Button
+            sx={{ my: 2, color: 'inherit', display: 'block' }}
+            onClick={routePOC1}
+            variant='outlined'
+          >
+            POC 1 = Simple Drawer
+        </Button>  
+        <Button
+            sx={{ my: 2, color: 'inherit', display: 'block' }}
+            onClick={routePOC2}
+            variant='outlined'
+          >
+            POC 2 = Slide Drawer
+        </Button>  
+        <Button
+            sx={{ my: 2, color: 'inherit', display: 'block' }}
+            onClick={routePOC3}
+            variant='outlined'
+          >
+            POC 3 = Responsive Drawer
+        </Button>          
 
       </Container>
       <Box
