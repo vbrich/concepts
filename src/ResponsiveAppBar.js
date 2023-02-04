@@ -32,12 +32,12 @@ function ResponsiveAppBar() {
   // ROUTING
   const navigate = useNavigate();
   const routeHome = () => {
-    navigate('/');    
+    navigate('/concepts/');    
     setAnchorElNav(null);
   }
  
   const routeAbout = () => {
-    navigate('/about');    
+    navigate('/concepts/about');    
     setAnchorElNav(null);
   }
 
