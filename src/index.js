@@ -20,9 +20,9 @@ root.render(
             <Route path='' element={<Main />}/>
             <Route path='about' element={<About />}/>
         </Route>
-        <Route path='/poc1' element={<DemoDrawer />}/>
-        <Route path='/poc2' element={<DemoSwiper />}/> 
-        <Route path='/poc3' element={<DemoResponsiveDrawer />}/>
+        <Route path='/concepts/poc1' element={<DemoDrawer />}/>
+        <Route path='/concepts/poc2' element={<DemoSwiper />}/> 
+        <Route path='/concepts/poc3' element={<DemoResponsiveDrawer />}/>
       </Routes>
     </BrowserRouter>
 );

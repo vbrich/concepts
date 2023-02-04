@@ -40,7 +40,7 @@ export default function Main() {
         </Typography>
 
         <br/>
-        <Link to="/poc1" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+        <Link to="/concepts/poc1" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
           <ListItemButton 
             sx={{ boxShadow: 1, width: '300px' }}
           >
@@ -51,7 +51,7 @@ export default function Main() {
           </ListItemButton>
         </Link> 
         <br/>
-        <Link to="/poc2" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+        <Link to="/concepts/poc2" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
           <ListItemButton 
             sx={{ boxShadow: 1, width: '300px' }}
           >
@@ -62,7 +62,7 @@ export default function Main() {
           </ListItemButton>
         </Link> 
         <br/>
-        <Link to="/poc3" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+        <Link to="/concepts/poc3" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
           <ListItemButton 
             sx={{ boxShadow: 1, width: '300px' }}
           >
