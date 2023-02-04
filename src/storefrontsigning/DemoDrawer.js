@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import Divider from '@mui/material/Divider';
-
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -11,6 +10,7 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import loading from '../assets/images/bulb.gif'; // Tell Webpack this JS file uses this image
 
 const cards = [1, 2, 3, 4, 5];
 const heading = [
@@ -39,14 +39,17 @@ const link = [
 ];
 
 const drawerWidth = 350;
-const imgUrl = 'https://unsplash.com/photos/jf1EomjlQi0';
 
+const imgUrl = loading;
+// console.log(loading);
 const divStyle = {
-  backgroundImage: 'url(' + imgUrl + ')',
-  backgroundColor: 'Snow'
-};
+    backgroundImage: 'url(' + imgUrl + ')',
+    backgroundColor: 'Snow',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
+  };
 
-export default function MyDrawer() {
+export default function DemoDrawer() {
   return (
 
     <Box sx={{ display: 'flex' }}>
@@ -87,8 +90,8 @@ export default function MyDrawer() {
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
-                  <CardContent sx={{ flexGrow: 1, border: 20 }}>
-                    <Typography align="center" gutterBottom backgroundColor="blue" color="whitesmoke" sx={{ fontSize: 16 }}>
+                  <CardContent sx={{ flexGrow: 1, border: 1 }}>
+                    <Typography align="center" gutterBottom backgroundColor="grey" color="whitesmoke" sx={{ fontSize: 16 }}>
                       You're Already Approved!
                     </Typography>
                     <Typography align="center">
@@ -96,11 +99,6 @@ export default function MyDrawer() {
                       Up to $60,000
                     </Typography>
                   </CardContent>
-                  <CardActions style={{ justifyContent: 'right' }}>
-                    <a href={link[1]} target="_blank" rel="noreferrer">
-                      <Button variant="text" size="small"><OpenInNewIcon /></Button>                    
-                    </a>                  
-                  </CardActions>
                 </Card>
               </Grid>
               <Divider/>

@@ -7,8 +7,9 @@ import './index.css';
 import ResponsiveAppBar from './ResponsiveAppBar';
 import Main from './Main';
 import About from './About';
-import SwipeableEdgeDrawer from './SwipableEdgeDrawer';
-import MyDrawer from './MyDrawer';
+import DemoSwiper from './storefrontsigning/DemoSwiper';
+import DemoDrawer from './storefrontsigning/DemoDrawer';
+import DemoResponsiveDrawer from './storefrontsigning/DemoResponsiveDrawer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,8 +20,9 @@ root.render(
             <Route path='' element={<Main />}/>
             <Route path='about' element={<About />}/>
         </Route>
-        <Route path='/swipedrawer' element={<SwipeableEdgeDrawer />}/>
-        <Route path='/mydrawer' element={<MyDrawer />}/>
+        <Route path='/poc1' element={<DemoDrawer />}/>
+        <Route path='/poc2' element={<DemoSwiper />}/> 
+        <Route path='/poc3' element={<DemoResponsiveDrawer />}/>
       </Routes>
     </BrowserRouter>
 );

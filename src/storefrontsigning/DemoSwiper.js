@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Global } from '@emotion/react';
 import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,12 +8,15 @@ import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import loading from '../assets/images/simpleload.gif'; // Tell Webpack this JS file uses this image
 
-const imgUrl = 'https://unsplash.com/photos/jf1EomjlQi0';
-
+const imgUrl = loading;
+// console.log(loading);
 const divStyle = {
     backgroundImage: 'url(' + imgUrl + ')',
-    backgroundColor: 'Snow'
+    backgroundColor: 'Snow',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
   };
 
 const drawerBleeding = 56;
@@ -39,7 +41,7 @@ const Puller = styled(Box)(({ theme }) => ({
   left: 'calc(50% - 15px)',
 }));
 
-function SwipeableEdgeDrawer(props) {
+function DemoSwiper(props) {
   const { window } = props;
   const [open, setOpen] = React.useState(false);
 
@@ -123,12 +125,4 @@ function SwipeableEdgeDrawer(props) {
   );
 }
 
-SwipeableEdgeDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
-
-export default SwipeableEdgeDrawer;
+export default DemoSwiper;

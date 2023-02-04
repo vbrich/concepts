@@ -3,9 +3,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import { useNavigate } from 'react-router-dom';
-import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import CreateIcon from '@mui/icons-material/Create';
 
 function Copyright() {
   return (
@@ -21,14 +23,6 @@ function Copyright() {
 }
 
 export default function Main() {
-  // ROUTING
-  const navigate = useNavigate();
-  const routePOC1 = () => {
-    navigate('/swipedrawer');    
-  }
-  const routePOC2 = () => {
-    navigate('/mydrawer');    
-  }
 
   return (
     <Box
@@ -45,20 +39,39 @@ export default function Main() {
           Choose a POC to demo
         </Typography>
 
-        <Button
-            sx={{ my: 2, color: 'inherit', display: 'block' }}
-            variant='outlined'
-            onClick={routePOC1}
+        <br/>
+        <Link to="/poc1" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+          <ListItemButton 
+            sx={{ boxShadow: 1, width: '300px' }}
           >
-            POC 1 - Swipeable Drawer
-        </Button>
-        <Button
-            sx={{ my: 2, color: 'inherit', display: 'block' }}
-            variant='outlined'
-            onClick={routePOC2}
+            <ListItemIcon>
+                <CreateIcon />
+            </ListItemIcon>
+            <ListItemText primary="POC1 = Drawer" />
+          </ListItemButton>
+        </Link> 
+        <br/>
+        <Link to="/poc2" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+          <ListItemButton 
+            sx={{ boxShadow: 1, width: '300px' }}
           >
-            POC 2 - Regular Drawer
-        </Button>
+            <ListItemIcon>
+                <CreateIcon />
+            </ListItemIcon>
+            <ListItemText primary="POC2 = Slider Drawer" />
+          </ListItemButton>
+        </Link> 
+        <br/>
+        <Link to="/poc3" style={{ color: 'inherit', textDecoration: 'none' }} target="_blank">
+          <ListItemButton 
+            sx={{ boxShadow: 1, width: '300px' }}
+          >
+            <ListItemIcon>
+                <CreateIcon />
+            </ListItemIcon>
+            <ListItemText primary="POC3 = Responsive Drawer" />
+          </ListItemButton>
+        </Link> 
 
       </Container>
       <Box
