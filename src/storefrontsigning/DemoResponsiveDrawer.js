@@ -2,22 +2,19 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import Tooltip from '@mui/material/Tooltip';
 import Badge from '@mui/material/Badge';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import loading from '../assets/images/docload.gif'; // Tell Webpack this JS file uses this image
+import CloseIcon from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
 
 const drawerWidth = 400;
 
@@ -25,7 +22,7 @@ const imgUrl = loading;
 // console.log(loading);
 const divStyle = {
     backgroundImage: 'url(' + imgUrl + ')',
-    backgroundColor: 'Snow',
+    backgroundColor: 'white',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat'
 };
@@ -41,32 +38,78 @@ function DemoResponsiveDrawer(props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+
+      <Box sx={{ overflow: 'auto' }}>
+
+<Grid 
+sx={{
+  height: '100%',
+  width: '95%',
+  display: 'flex',
+  flexDirection: 'column',
+  margin: '0 auto',
+  justifyContent: 'center',
+  alignItems: 'center'
+}}
+>
+  <Card sx={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
+    <CardContent sx={{ flexGrow: 1, border: 0, padding: 0 }}>
+      <Typography align="center" gutterBottom backgroundColor="#005F89" color="whitesmoke" sx={{ fontSize: 16 }}>
+        You're Already Approved!
+      </Typography>
+      <Typography align="center">
+        Refinance your Auto <br/>
+        Up to $60,000
+      </Typography>
+    </CardContent>
+  </Card>
+
+  <br/>
+
+  <Card sx={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
+    <CardContent sx={{ flexGrow: 1, border: 0, padding: 0 }}>
+      <Typography align="center" gutterBottom backgroundColor="#005F89" color="whitesmoke" sx={{ fontSize: 16 }}>
+        You're Already Approved!
+      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
+        <Box sx={{ width: '10%' }}>
+        </Box>
+        <Typography align="center" sx={{ flexGrow: 1 }}>
+          New Auto <br/>
+          Up to $60,000
+        </Typography>
+      </Box>
+    </CardContent>
+  </Card>
+
+  <br/>
+
+  <Card sx={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
+    <CardContent sx={{ flexGrow: 1, border: 0, padding: 0 }}>
+      <Typography align="center" gutterBottom backgroundColor="#000" color="#fff" sx={{ fontSize: 16 }}>
+        Apply Now
+      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
+        <Box sx={{ width: '10%' }}>
+        </Box>
+        <Typography align="center" sx={{ flexGrow: 1 }}>
+          Visa Platinum <br/>
+          APR as low as 9.99%
+        </Typography>
+      </Box>
+    </CardContent>
+  </Card>
+
+  <br />
+  
+</Grid>
+
+<br/>
+
+</Box>
+
+
+
     </div>
   );
 
@@ -122,6 +165,9 @@ function DemoResponsiveDrawer(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
+          <Button variant="outlined" onClick={handleDrawerToggle}>
+            <CloseIcon/>
+          </Button>
           {drawer}
         </Drawer>
         <Drawer

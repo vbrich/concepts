@@ -2,41 +2,12 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
+// import Divider from '@mui/material/Divider';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import loading from '../assets/images/bulb.gif'; // Tell Webpack this JS file uses this image
-
-const cards = [1, 2, 3, 4, 5];
-const heading = [
-  '', 
-  'Features',
-  'Encode PDF', 
-  'Decode PDF', 
-  'Encode JSON',
-  'Decode JSON'  
-];
-const subheading = [
-  '',   
-  'Trello Board',
-  'Convert PDF to base64', 
-  'Convert base64 to PDF', 
-  'Convert JSON to base64',
-  'Convert base64 to JSON'  
-];
-const link = [
-  '', 
-  'https://trello.com/b/1m048pHn/features',
-  'https://base64.guru/converter/encode/pdf', 
-  'https://base64.guru/converter/decode/pdf', 
-  'https://codebeautify.org/json-to-base64-converter',
-  'https://codebeautify.org/base64-to-json-converter'  
-];
+import loading from '../assets/images/docload.gif'; // Tell Webpack this JS file uses this image
 
 const drawerWidth = 350;
 
@@ -44,7 +15,7 @@ const imgUrl = loading;
 // console.log(loading);
 const divStyle = {
     backgroundImage: 'url(' + imgUrl + ')',
-    backgroundColor: 'Snow',
+    backgroundColor: 'white',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat'
   };
@@ -68,7 +39,7 @@ export default function DemoDrawer() {
             width="100%"
             height={1000} 
             loading='lazy'>
-          </iframe>
+          </iframe>         
       </Box>
 
       <Drawer
@@ -81,55 +52,73 @@ export default function DemoDrawer() {
         }}
       >
         <Toolbar />
-        <Divider/>
 
         <Box sx={{ overflow: 'auto' }}>
 
-              <Divider/>
-              <Grid item key={15} xs={12} sm={6} md={3}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardContent sx={{ flexGrow: 1, border: 1 }}>
-                    <Typography align="center" gutterBottom backgroundColor="grey" color="whitesmoke" sx={{ fontSize: 16 }}>
-                      You're Already Approved!
-                    </Typography>
-                    <Typography align="center">
-                      Refinance your auto <br/>
-                      Up to $60,000
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Divider/>
+          <Grid 
+          sx={{
+            height: '100%',
+            width: '95%',
+            display: 'flex',
+            flexDirection: 'column',
+            margin: '0 auto',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
+          >
+            <Card sx={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ flexGrow: 1, border: 0, padding: 0 }}>
+                <Typography align="center" gutterBottom backgroundColor="#005F89" color="whitesmoke" sx={{ fontSize: 16 }}>
+                  You're Already Approved!
+                </Typography>
+                <Typography align="center">
+                  Refinance your Auto <br/>
+                  Up to $60,000
+                </Typography>
+              </CardContent>
+            </Card>
 
-            {cards.map((card) => (
-              <div>
-                <br/>
-                <Divider/>
-                <Grid item key={card} xs={12} sm={6} md={3}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography align="center" gutterBottom variant="h5" component="h2">
-                      {heading[card]}
-                    </Typography>
-                    <Typography align="center">
-                      {subheading[card]}
-                    </Typography>
-                  </CardContent>
-                  <CardActions style={{ justifyContent: 'right' }}>
-                    <a href={link[card]} target="_blank" rel="noreferrer">
-                      <Button variant="text" size="small"><OpenInNewIcon /></Button>                    
-                    </a>
-                  </CardActions>
-                </Card>
-              </Grid>
-              <Divider/>
-              </div>
-              
-            ))}
+            <br/>
+
+            <Card sx={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ flexGrow: 1, border: 0, padding: 0 }}>
+                <Typography align="center" gutterBottom backgroundColor="#005F89" color="whitesmoke" sx={{ fontSize: 16 }}>
+                  You're Already Approved!
+                </Typography>
+                <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
+                  <Box sx={{ width: '10%' }}>
+                  </Box>
+                  <Typography align="center" sx={{ flexGrow: 1 }}>
+                    New Auto <br/>
+                    Up to $60,000
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+
+            <br/>
+
+            <Card sx={{ height: '100%', width: '90%', display: 'flex', flexDirection: 'column' }}>
+              <CardContent sx={{ flexGrow: 1, border: 0, padding: 0 }}>
+                <Typography align="center" gutterBottom backgroundColor="#000" color="#fff" sx={{ fontSize: 16 }}>
+                  Apply Now
+                </Typography>
+                <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
+                  <Box sx={{ width: '10%' }}>
+                  </Box>
+                  <Typography align="center" sx={{ flexGrow: 1 }}>
+                    Visa Platinum <br/>
+                    APR as low as 9.99%
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+
+            <br />
+            
+          </Grid>
+          
+          <br/>
 
         </Box>
       </Drawer>
