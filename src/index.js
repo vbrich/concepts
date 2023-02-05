@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {CssBaseline} from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import './index.css';
 import ResponsiveAppBar from './ResponsiveAppBar';
 import Main from './Main';
@@ -13,10 +13,10 @@ import DemoResponsiveDrawer from './storefrontsigning/DemoResponsiveDrawer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <HashRouter>
       <CssBaseline />  
       <Routes>
-        <Route path='/concepts' element={<ResponsiveAppBar />}>                    
+        <Route path='/' element={<ResponsiveAppBar />}>                    
             <Route path='' element={<Main />}/>
             <Route path='about' element={<About />}/>
         </Route>
@@ -24,5 +24,5 @@ root.render(
         <Route path='/poc2' element={<DemoSwiper />}/> 
         <Route path='/poc3' element={<DemoResponsiveDrawer />}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 );
