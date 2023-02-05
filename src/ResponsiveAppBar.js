@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 // import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import dark from './themes/dark';
@@ -95,6 +95,7 @@ function ResponsiveAppBar() {
 
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {/* main buttons */}
+              {/*
               <Button
                   sx={{ my: 2, color: 'white', display: 'block' }}
                   onClick={routeHome}
@@ -106,7 +107,8 @@ function ResponsiveAppBar() {
                   onClick={routeAbout}
                 >
                   About
-              </Button>              
+              </Button>  
+              */}            
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
