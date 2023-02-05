@@ -37,7 +37,12 @@ function DemoResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
+      <br />
+      <Typography align="center" gutterBottom  backgroundColor="#ffffff" color="black" sx={{ fontSize: 20 }}>
+        Your Offers
+      </Typography>
+      <br />
+
 
       <Box sx={{ overflow: 'auto' }}>
 
@@ -59,7 +64,7 @@ sx={{
       </Typography>
       <Typography align="center">
         Refinance your Auto <br/>
-        Up to $60,000
+        Up to <b>$60,000</b>
       </Typography>
     </CardContent>
   </Card>
@@ -76,7 +81,7 @@ sx={{
         </Box>
         <Typography align="center" sx={{ flexGrow: 1 }}>
           New Auto <br/>
-          Up to $60,000
+          Up to <b>$60,000</b>
         </Typography>
       </Box>
     </CardContent>
@@ -94,7 +99,7 @@ sx={{
         </Box>
         <Typography align="center" sx={{ flexGrow: 1 }}>
           Visa Platinum <br/>
-          APR as low as 9.99%
+          APR as low as <b>9.99%</b>
         </Typography>
       </Box>
     </CardContent>
