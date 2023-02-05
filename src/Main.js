@@ -7,6 +7,20 @@ import Container from '@mui/material/Container';
 import CreateIcon from '@mui/icons-material/Create';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+
+// Modal
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 function Copyright() {
   return (
@@ -16,6 +30,11 @@ function Copyright() {
 }
 
 export default function Main() {
+
+  // Modal
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   // ROUTING
   const navigate = useNavigate();
@@ -38,27 +57,6 @@ export default function Main() {
           Choose a Concept
         </Typography>
 
-{/*
-        <Button
-            startIcon={<CreateIcon />}
-            sx={{ my: 2, color: 'inherit' }}
-            onClick={routePOC1}
-            variant='outlined'
-          >
-            POC 1 = Simple Drawer
-        </Button>  
-        <br />
-        <Button
-            startIcon={<CreateIcon />}
-            sx={{ my: 2, color: 'inherit' }}
-            onClick={routePOC2}
-            variant='outlined'
-          >
-            POC 2 = Slide Drawer
-        </Button>  
-        <br />
-*/}   
-
         <Button
             startIcon={<CreateIcon />}
             sx={{ my: 2, color: 'inherit' }}
@@ -67,6 +65,26 @@ export default function Main() {
           >
             Signing in a storefront
         </Button>          
+        &nbsp;
+        <Button onClick={handleOpen}>Notes</Button>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              Developer Notes 
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 1 }}>
+              - DocuSign doesn't recommend iframes<br />
+              - Double scroll awkwardness on mobile devices<br />
+              - Distracts user from their focus (to sign)<br />
+              - DocuSign mobile-enabled setting triggers on pc with iframe<br />
+            </Typography>
+          </Box>
+        </Modal>
 
       </Container>
       <Box

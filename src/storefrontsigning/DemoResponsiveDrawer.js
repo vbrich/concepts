@@ -15,6 +15,9 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import carlogo from '../assets/images/CuneXusAuto.png';
+import cardlogo from '../assets/images/CuneXusCard.png';
 
 const drawerWidth = 400;
 
@@ -62,10 +65,17 @@ sx={{
       <Typography align="center" gutterBottom backgroundColor="#005F89" color="whitesmoke" sx={{ fontSize: 16 }}>
         You're Already Approved!
       </Typography>
-      <Typography align="center">
-        Refinance your Auto <br/>
-        Up to <b>$60,000</b>
-      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
+        <Box sx={{ width: '10%' }}>
+          <Paper style={{ marginLeft: '20px', border: 'none', boxShadow: 'none' }}>
+            <img src={carlogo} alt='car' style={{ width: 50, height: 50 }} />
+          </Paper>
+        </Box>
+        <Typography align="center" sx={{ flexGrow: 1 }}>
+          Refinance your Auto <br/>
+          Up to <b>$60,000</b>
+        </Typography>
+      </Box>
     </CardContent>
   </Card>
 
@@ -78,6 +88,9 @@ sx={{
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
         <Box sx={{ width: '10%' }}>
+          <Paper style={{ marginLeft: '20px', border: 'none', boxShadow: 'none' }}>
+            <img src={carlogo} alt='car' style={{ width: 50, height: 50 }} />
+          </Paper>
         </Box>
         <Typography align="center" sx={{ flexGrow: 1 }}>
           New Auto <br/>
@@ -96,6 +109,9 @@ sx={{
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'row', width: "100%" }}>
         <Box sx={{ width: '10%' }}>
+          <Paper style={{ marginLeft: '20px', border: 'none', boxShadow: 'none' }}>
+            <img src={cardlogo} alt='car' style={{ width: 50, height: 50 }} />
+          </Paper>
         </Box>
         <Typography align="center" sx={{ flexGrow: 1 }}>
           Visa Platinum <br/>
@@ -112,8 +128,6 @@ sx={{
 <br/>
 
 </Box>
-
-
 
     </div>
   );
