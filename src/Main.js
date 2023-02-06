@@ -75,16 +75,11 @@ export default function Main() {
         >
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              Initial Observations 
+              Notes 
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 1 }}>
-              - DocuSign doesn't recommend iframes<br />
-              - Double scroll awkwardness on mobile devices<br />
-              - Distracts user from their focus (to sign)<br />
-              - DocuSign mobile-enabled setting triggers on pc with iframe<br />
-              - GHPages has issues with BrowserRouter, so using a HashRouter<br />
               - Can set DocuSign redirect location after signing<br />
-              - Using a personal REPLIT running Express for server side DS work<br />
+              - DocuSign account has mobile signing enabled, so radio shows<br />
             </Typography>
           </Box>
         </Modal>
